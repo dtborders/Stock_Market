@@ -78,4 +78,12 @@ Figure 9: VWAP of stock using previous 5 minutes with 1 minute updates.
 ## LSTM Strategy 
 Machine learning algorithms offer a black box approach to making predictions. Often machine learning approaches increase accuracy at the price of transparency and intuitivity. Since we are limited by the amount of data and compute power we possess, so overfitting is a risk. This model would need more testing to ensure its rigor. Long Short Term Memory (LSTM) was introduced in 1997 to solve the exploding/vanishing gradient problem by modifying how the gradients flow through the network [7]. LSTMs are a state of the art method for analyzing time series data. After training an LSTM that sees 10 ticks of 1 minute VWAP data that sees 5 minutes into the past, we achieved a 72% accuracy of next tic direction prediction. In other words, this LSTM sees 10 VWAP ticks and predicts the direction of the next VWAP tic. To test this algorithm, a trade was conducted at the end of the last VWAP period the model sees. The algorithm achieved an average profit of 2.4 cents with a standard deviation of 28 cents. This method could be more profitable if it acted on historic trades and predicted a certain amount of time out. This, however, shows LSTMs have the ability to predict VWAP direction and in general stock data. 
 
+## Further Reading
+1. Chengevelyn. “Just 10% of Trading Is Regular Stock Picking, JPMorgan Estimates.” CNBC, CNBC, 14 June 2017, www.cnbc.com/2017/06/13/death-of-the-human-investor-just-10-percent-of-trading-is-regular-stock-picking-jpmorgan-estimates.html.
+2. Patterson, Scott, and Alexander Osipovich. “High-Frequency Traders Feast on Volatile Market.” The Wall Street Journal, Dow Jones & Company, 27 Mar. 2020, www.wsj.com/articles/high-frequency-traders-feast-on-volatile-market-11585310401?mod=mhp.
+3. Fischer, Thomas, and Christopher Krauss. “Deep Learning with Long Short-Term Memory Networks for Financial Market Predictions.” European Journal of Operational Research, vol. 270, no. 2, 2018, pp. 654–669., doi:10.1016/j.ejor.2017.11.054.
+4. Lerner, Peter. “Theoretical Analysis of the Bid-Ask Bounce.” Aestimatio, 2010.
+5. Harris, Frederick H. Deb., et al. “Security Price Adjustment across Exchanges: an Investigation of Common Factor Components for Dow Stocks.” Journal of Financial Markets, vol. 5, no. 3, 2002, pp. 277–308., doi:10.1016/s1386-4181(01)00017-9.
+6. Hochreiter, Sepp, and Jürgen Schmidhuber. “Long Short-Term Memory.” Neural Computation, vol. 9, no. 8, 1997, pp. 1735–1780., doi:10.1162/neco.1997.9.8.1735.
+
 
